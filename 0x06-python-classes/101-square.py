@@ -56,11 +56,11 @@ class Square:
         if self.size != 0:
             if self.position[1] is not 0:
                 print('\n' * self.position[1], end='')
-                for ch in range(self.size):
+            for ch in range(self.size):
                     print(' ' * self.position[0], end='')
                     print('#' * self.size)
-                else:
-                    print()
+        else:
+            print()
 
     """print(square_obj) == square_obj.my_print()"""
     def __str__(self):
@@ -73,6 +73,6 @@ class Square:
                 to_print += '#' * self.size
                 if ch != self.__size - 1:
                     to_print += '\n'
-                else:
-                    to_print = ''
-                return to_print
+        else:
+            to_print = ''
+        return to_print
