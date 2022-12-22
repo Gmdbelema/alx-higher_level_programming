@@ -40,11 +40,11 @@ class Node():
         self.__next_node = NodeValue
 
 
-    class SinglyLinkedList():
-        """Class SinglyLinkedList"""
-        def __init__(self):
-            """Initialization of SinglyLinkedList"""
-            self.__head = None
+class SinglyLinkedList():
+    """Class SinglyLinkedList"""
+    def __init__(self):
+        """Initialization of SinglyLinkedList"""
+        self.__head = None
 
     def sorted_insert(self, DataValue):
         """Inserts a nodes"""
