@@ -32,11 +32,11 @@ class Square:
             raise ValueError('size must be >= 0')
         self.__size = value
 
-        """returns the current square area"""
+    """returns the current square area"""
         def area(self):
             return self.__size ** 2
 
-        """prints in stdout the square with the character #"""
+    """prints in stdout the square with the character #"""
         def my_print(self):
             if self.size != 0:
                 for ch in range(self.size):
