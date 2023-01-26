@@ -65,17 +65,17 @@ class Base:
 
         if os.path.exists(filename) is False:
             return []
+    
+        with open(filename, 'r') as f:
+            list_str = f.read()
 
-    with open(filename, 'r') as f:
-        list_str = f.read()
+        list_cls = cls.from_json_string(list_str)
+        list_ins = []
 
-    list_cls = cls.from_json_string(list_str)
-    list_ins = []
+        for index in range(len(list_cls)):
+            list_ins.append(cls.create(**list_cls[index]))
 
-    for index in range(len(list_cls)):
-        list_ins.append(cls.create(**list_cls[index]))
-
-    return list_ins
+        return list_ins
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
